@@ -12,12 +12,30 @@
     <bean id="timeHandler" class="zwl.learning.note.aop.aop.TimeHandler"/>
 
     <aop:config>
-        <aop:pointcut id="addAllMethod" expression="execution(* zwl.learning.note.aop.primitive.Dao.*(..))"/>
         <aop:aspect id="time" ref="timeHandler">
+            <aop:pointcut id="addAllMethod" expression="execution(* zwl.learning.note.aop.primitive.Dao.*(..))"/>
             <aop:around method="printTime" pointcut-ref="addAllMethod"/>
             <!--<aop:before method="printTime" pointcut-ref="addAllMethod"/>-->
             <!--<aop:after method="printTime" pointcut-ref="addAllMethod"/>-->
         </aop:aspect>
+
+        <aop:aspect id="time2" ref="timeHandler2">
+            <aop:pointcut id="addAllMethod2" expression="execution(* zwl.learning.note.aop.demo.HelloWorld.*(..))" />
+            <aop:before method="printTime" pointcut-ref="addAllMethod2" />
+            <aop:after method="printTime" pointcut-ref="addAllMethod2" />
+        </aop:aspect>
     </aop:config>
+
+    <bean id="helloWorldImpl1" class="zwl.learning.note.aop.demo.HelloWorldImpl1" />
+    <bean id="helloWorldImpl2" class="zwl.learning.note.aop.demo.HelloWorldImpl2" />
+    <bean id="timeHandler2" class="zwl.learning.note.aop.demo.TimeHandler" />
+
+    <!--<aop:config>-->
+        <!--<aop:aspect id="time2" ref="timeHandler2">-->
+            <!--<aop:pointcut id="addAllMethod2" expression="execution(* zwl.learning.note.aop.demo.HelloWorld.*(..))" />-->
+            <!--<aop:before method="printTime" pointcut-ref="addAllMethod2" />-->
+            <!--<aop:after method="printTime" pointcut-ref="addAllMethod2" />-->
+        <!--</aop:aspect>-->
+    <!--</aop:config>-->
 
 </beans>

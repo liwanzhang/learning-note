@@ -5,8 +5,11 @@ import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import zwl.learning.note.aop.demo.HelloWorld;
 import zwl.learning.note.aop.primitive.Dao;
 
 /**
@@ -33,5 +36,22 @@ public class AOPTest {
         dao.delete();
         LOGGER.info("----------分割线----------");
         dao.update();
+    }
+
+    @Test
+    public void demoTest() {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:/spring/applicationContext-main.xml");
+
+        HelloWorld hw1 = (HelloWorld) ctx.getBean("helloWorldImpl1");
+        HelloWorld hw2 = (HelloWorld) ctx.getBean("helloWorldImpl2");
+
+        hw1.printHelloWorld();
+        System.out.println();
+        hw1.doPrint();
+
+        System.out.println();
+        hw2.printHelloWorld();
+        System.out.println();
+        hw2.doPrint();
     }
 }
