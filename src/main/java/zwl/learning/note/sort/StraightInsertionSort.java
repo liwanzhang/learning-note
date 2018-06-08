@@ -34,10 +34,25 @@ public class StraightInsertionSort {
         return false;
     }
 
+    public static void insertionSort(int[] a) {
+        System.out.println(JSON.toJSONString(a));
+        int tmp;
+        for (int i = 1; i < a.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (a[j] < a[j - 1]) {
+                    tmp = a[j - 1];
+                    a[j - 1] = a[j];
+                    a[j] = tmp;
+                }
+            }
+        }
+        System.out.println(JSON.toJSONString(a));
+    }
 
     public static void main(String[] args) {
         int[] l = {0, 49, 38, 65, 97, 76, 13, 27, 49};
 
-        insertSort(l);
+//        insertSort(l);
+        insertionSort(l);
     }
 }
