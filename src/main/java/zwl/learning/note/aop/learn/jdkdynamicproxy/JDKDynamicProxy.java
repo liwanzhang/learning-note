@@ -11,6 +11,11 @@ import java.lang.reflect.Proxy;
  */
 public class JDKDynamicProxy implements InvocationHandler {
 
+    /*
+     * jdk 动态代理
+     * 问题:只能代理实现接口的类
+     */
+
     private Object target;
 
     public JDKDynamicProxy(Object target) {

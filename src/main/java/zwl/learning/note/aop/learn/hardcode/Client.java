@@ -16,6 +16,8 @@ public class Client {
 
 
     /*
+     * 参考:http://www.importnew.com/21807.html
+     *
      * 硬编码,违反“开闭原则”
      *
      * 1.统计每个方法的执行时间，以对性能作出评估;

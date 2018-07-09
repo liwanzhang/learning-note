@@ -12,6 +12,8 @@ public class GreetingProxy implements Greeting {
 
     /*
      * 代理模式
+     *
+     * 问题:Proxy类越来越多,最好只有一个代理类
      */
 
     private GreetingImpl greetingImpl;

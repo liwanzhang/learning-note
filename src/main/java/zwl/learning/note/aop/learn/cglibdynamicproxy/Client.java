@@ -1,7 +1,7 @@
 package zwl.learning.note.aop.learn.cglibdynamicproxy;
 
 import zwl.learning.note.aop.learn.Greeting;
-import zwl.learning.note.aop.learn.hardcode.GreetingImpl;
+import zwl.learning.note.aop.learn.GreetingImpl;
 
 /**
  * @author zhangwanli
