@@ -10,12 +10,14 @@ import zwl.learning.note.util.Print;
 public class BinaryString {
 
     public static void main(String[] args) {
+        Print.printHorizontalLine();
         left();
         Print.printHorizontalLine();
         right();
         Print.printHorizontalLine();
         reverse();
     }
+
 
     /**
      * 左移

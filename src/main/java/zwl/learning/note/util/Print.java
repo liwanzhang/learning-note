@@ -1,5 +1,7 @@
 package zwl.learning.note.util;
 
+import java.text.DecimalFormat;
+
 /**
  * @author zhangwanli
  * @description
@@ -40,4 +42,14 @@ public class Print {
     public static void printHorizontalLine() {
         println("--------------------------------");
     }
+
+    /**
+     *
+     */
+    public static String print4(int x) {
+        DecimalFormat df = new DecimalFormat("0000");
+        String s = df.format(x);
+        return s;
+    }
+
 }
