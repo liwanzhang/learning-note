@@ -1,5 +1,6 @@
 package zwl.learning.note.string;
 
+import org.junit.Test;
 import zwl.learning.note.util.Print;
 
 /**
@@ -13,7 +14,7 @@ public class BinaryString {
         Print.printHorizontalLine();
         left();
         Print.printHorizontalLine();
-        right();
+//        right();
         Print.printHorizontalLine();
         reverse();
     }
@@ -45,11 +46,12 @@ public class BinaryString {
      * 无符号右移
      * 二进制码整体右移，左边部分总是以0填充，右边超出部分舍弃。
      */
-    private static void right() {
+    @Test
+    public void right() {
         int i = 0x80000001;
         int r = i >> 2;
         int a = i >>> 2;
-
+        Print.println(i);
         Print.printFullBinaryString(i);
         Print.printFullBinaryString(r);
         Print.printFullBinaryString(a);
