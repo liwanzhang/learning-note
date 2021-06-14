@@ -9,7 +9,7 @@
     <name>learning-note Maven Webapp</name>
 
     <properties>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <spring.version>4.3.10.RELEASE</spring.version>
         <cglib-nodep.version>3.1</cglib-nodep.version>
         <cglib.version>3.1</cglib.version>
