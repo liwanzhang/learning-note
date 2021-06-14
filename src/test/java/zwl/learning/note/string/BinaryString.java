@@ -29,9 +29,9 @@ public class BinaryString {
         int r = i << 2;
         int a = i << 2;
 
-        Print.printFullBinaryString(i);
-        Print.printFullBinaryString(r);
-        Print.printFullBinaryString(a);
+        Print.printFullBinaryStringInt(i);
+        Print.printFullBinaryStringInt(r);
+        Print.printFullBinaryStringInt(a);
 
         /*
         10000000000000000000000000000001
@@ -52,9 +52,9 @@ public class BinaryString {
         int r = i >> 2;
         int a = i >>> 2;
         Print.println(i);
-        Print.printFullBinaryString(i);
-        Print.printFullBinaryString(r);
-        Print.printFullBinaryString(a);
+        Print.printFullBinaryStringInt(i);
+        Print.printFullBinaryStringInt(r);
+        Print.printFullBinaryStringInt(a);
 
         /*
         10000000000000000000000000000001
@@ -71,9 +71,9 @@ public class BinaryString {
         int r = ~1;
         int a = 1 ^ 0;
 
-        Print.printFullBinaryString(i);
-        Print.printFullBinaryString(r);
-        Print.printFullBinaryString(a);
+        Print.printFullBinaryStringInt(i);
+        Print.printFullBinaryStringInt(r);
+        Print.printFullBinaryStringInt(a);
 
         /*
         00000000000000000000000000000001

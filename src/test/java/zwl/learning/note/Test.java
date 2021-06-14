@@ -9,19 +9,21 @@ import java.lang.management.ManagementFactory;
  */
 public class Test {
 
+    public void hello(String str ) {
+        System.out.println("hello");
+    }
+
     public static void main(String[] args) {
-        String name = ManagementFactory.getRuntimeMXBean().getName();
+//        Test t = new SubTest();
+//        SubTest t1 = (SubTest)t;
+        Test t = new Test();
+        SubTest t1 = (SubTest)t;
+        t1.hello("dd");
+    }
+}
 
-        String pid = name.split("@")[0];
-
-        System.out.println(name);
-        System.out.println(pid);
-
-
-        try {
-            Thread.sleep(10000000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+class SubTest extends Test {
+    public void hello(String str ) {
+        System.out.println("SubTest");
     }
 }

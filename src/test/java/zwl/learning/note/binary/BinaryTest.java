@@ -10,11 +10,19 @@ import zwl.learning.note.util.Print;
  */
 public class BinaryTest {
 
+
+    @Test
+    public void bitCountTest1() {
+
+        Print.printFullBinaryStringInt(1);
+        Print.printFullBinaryStringInt((1 << 8));
+    }
+
     @Test
     public void bitCountTest() {
         int i = 0x7ffffff0;
 
-        Print.printFullBinaryString(i);
+        Print.printFullBinaryStringInt(i);
         Print.println(i);
         Print.println(Integer.bitCount(i));
     }
@@ -37,17 +45,17 @@ public class BinaryTest {
     @Test
     public void test() {
 
-        Print.printFullBinaryString(1);
-        Print.printFullBinaryString(1 << 16);
-        Print.printFullBinaryString((1 << 16) - 1);
-        Print.printFullBinaryString(~((1 << 16) - 1));
-        Print.printFullBinaryString(0xffff0000);
+        Print.printFullBinaryStringInt(1);
+        Print.printFullBinaryStringInt(1 << 16);
+        Print.printFullBinaryStringInt((1 << 16) - 1);
+        Print.printFullBinaryStringInt(~((1 << 16) - 1));
+        Print.printFullBinaryStringInt(0xffff0000);
 
         Print.printHorizontalLine();
 
         int a = 65837;
-        Print.printFullBinaryString(a);
-        Print.printFullBinaryString(a & 0xffff0000);
+        Print.printFullBinaryStringInt(a);
+        Print.printFullBinaryStringInt(a & 0xffff0000);
         Print.println(a & 0xffff0000);
 
 
@@ -57,9 +65,9 @@ public class BinaryTest {
     @Test
     public void xor() {
         int a = 0x94218421, b = a >>> 16, c = a ^ b;
-        Print.printFullBinaryString(a);
-        Print.printFullBinaryString(b);
-        Print.printFullBinaryString(c);
+        Print.printFullBinaryStringInt(a);
+        Print.printFullBinaryStringInt(b);
+        Print.printFullBinaryStringInt(c);
 
 
     }

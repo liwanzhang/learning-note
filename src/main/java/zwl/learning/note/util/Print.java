@@ -12,7 +12,7 @@ public class Print {
     /**
      * 完整显示整型数据的二进制格式
      */
-    public static void printFullBinaryString(int x) {
+    public static void printFullBinaryStringInt(int x) {
         int[] buffer = new int[Integer.SIZE];
         for (int i = (Integer.SIZE - 1); i >= 0; i--) {
             buffer[i] = x >> i & 1;
@@ -21,7 +21,22 @@ public class Print {
         for (int j = (Integer.SIZE - 1); j >= 0; j--) {
             s = s + buffer[j];
         }
-        System.out.println(s);
+        System.out.println(s + " " + x);
+    }
+
+    /**
+     * 完整显示整型数据的二进制格式
+     */
+    public static void printFullBinaryStringByte(byte b) {
+        int[] buffer = new int[Byte.SIZE];
+        for (int i = (Byte.SIZE - 1); i >= 0; i--) {
+            buffer[i] = b >> i & 1;
+        }
+        String s = "";
+        for (int j = (Byte.SIZE - 1); j >= 0; j--) {
+            s = s + buffer[j];
+        }
+        System.out.println(s + " " + b);
     }
 
     public static void printBinaryString(int i) {

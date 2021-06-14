@@ -36,6 +36,9 @@ public class LinkedList {
         ll.print(newHead);
         newHead = ll.reverseDummy(ll.createLinkedList(list));
         ll.print(newHead);
+
+        newHead = ll.reverseMove(ll.createLinkedList(list));
+        ll.print(newHead);
     }
 
     /**
@@ -159,19 +162,18 @@ public class LinkedList {
     }
 
     /**
-     * 错误实现:NPE
+     *
      */
     static Node reverseMove(Node head) {
         //初始状态
-        Node pre = null;
         Node cur = head;
-        Node next = cur.next;
-
+        Node pre = null;
+        Node next = null;
         while (cur != null) {
+            next = cur.next;
             cur.next = pre;
             pre = cur;
             cur = next;
-            next = next.next;
         }
         return pre;
     }
